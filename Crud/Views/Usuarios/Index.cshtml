@@ -1,0 +1,44 @@
+﻿@model List<Crud.Models.ViewModels.ListTablaViewModel>
+@{
+    ViewBag.Title = "Listado de usuarios";
+}
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <table class="table">
+            <tr>
+                <th class="col-md-1">ID</th>
+                <th class="col-md-1">User</th>
+                <th class="col-md-1">Nombre</th>
+                <th class="col-md-1">Email</th>
+                <th class="col-md-1">Telefono</th>
+                <th class="col-md-1">Elimar</th>
+                <th class="col-md-1">Modificar</th>
+
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="idUsuario" class="col-md-1">@item.IdUsuario</td>
+                    <td class="col-md-1">@item.UserName</td>
+                    <td class="col-md-1">@item.Nombre</td>
+                    <td class="col-md-1">@item.Email</td>
+                    <td class="col-md-1">@item.Telefono</td>
+
+                    @*Se envía el id del usuario por URL*@
+                    <td class="col-md-1"> <a class="btn-sm btn-danger" href="~/Usuarios/Eliminar/@item.IdUsuario" />Eliminar</td>
+                    <td class="col-md-1"> <a class="btn-sm btn-success" href="~/Usuarios/Editar/@item.IdUsuario" />Modificar</td>
+                   
+
+                </tr>
+            }
+        </table>
+        <div class="col-md-2">
+            <a class="btn btn-primary" href="~/Usuarios/NuevoUsuario">Insertar Usuario</a>
+        </div>
+
+
+
+    </div>
+</div>

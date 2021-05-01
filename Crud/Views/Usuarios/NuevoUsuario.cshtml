@@ -1,0 +1,41 @@
+﻿@model List<Crud.Models.ViewModels.ListTablaViewModel>
+@{
+    ViewBag.Title = "Insertar usuario";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<form method="POST" action="/Usuarios/NuevoUsuario">
+ <div class="row">
+     <div class="col-md-12">
+
+         <div class="col-md-12" style="margin:5px">
+             <label class="col-md-3" for="txtNombre">Ingrese Nombre: </label>
+             <input class="col-md-3" type="text" name="txtNombre" placeholder="Juan" />
+         </div>
+
+         <div class="col-md-12" style="margin:5px">
+             <label class="col-md-3" for="txtUserName">Ingrese Nickname: </label>
+             <input class="col-md-3" type="text" name="txtUserName" placeholder="juancito22" />
+         </div>
+
+         <div class="col-md-12" style="margin:5px">
+             <label class="col-md-3" for="txtEmail">Ingrese Email: </label>
+             <input class="col-md-3" type="email" name="txtEmail" placeholder="juancito22@mimail.com" />
+         </div>
+
+         <div class="col-md-12" style="margin:5px">
+             <label class="col-md-3" for="txtTelefono">Ingrese Teléfono: </label>
+             <input class="col-md-3" type="number" name="txtTelefono" min="40000000" max="1599999999" placeholder="1122336655" />
+         </div>
+
+         <div class="col-md-12" style="margin:5px">
+             <input class="col-md-2" type="submit" name="btnEnviar" value="Enviar datos" />
+         </div>
+     </div>
+
+
+ </div>
+</form>
+
